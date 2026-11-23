@@ -1,0 +1,7 @@
+Patient Name: 
+Diagnosis: 
+Admit Date: 
+Room Rate: 
+Doctor Fee: 
+Pharmacy Fee: 
+-----------------------------------
