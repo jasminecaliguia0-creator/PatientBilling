@@ -5,3 +5,17 @@ Room Rate:
 Doctor Fee: 
 Pharmacy Fee: 
 -----------------------------------
+Patient Name: Jasmine Nicole B. Caliguia
+Diagnosis: Dengue
+Admit Date: 10/11/26
+Room Rate: 2000
+Doctor Fee: 1500
+Pharmacy Fee: 1200
+-----------------------------------
+Patient Name: 
+Diagnosis: 
+Admit Date: 
+Room Rate: 
+Doctor Fee: 
+Pharmacy Fee: 
+-----------------------------------
