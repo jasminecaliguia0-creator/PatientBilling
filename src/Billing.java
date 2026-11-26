@@ -1,13 +1,12 @@
 
-import java.awt.Color;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 
 public class Billing extends javax.swing.JFrame {
- ArrayList<Patient> patients = new ArrayList<>();
+
+    ArrayList<String> patients = new ArrayList<>();
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Billing.class.getName());
 
@@ -15,23 +14,9 @@ public class Billing extends javax.swing.JFrame {
         initComponents();
 
         setSize(1000, 600);
-        setLocationRelativeTo(null);
-        setResizable(false); //
+        setLocationRelativeTo(null);//maakes window appear sa center it screen.
+        setResizable(false);
 
-        // SAVE PATIENT BUTTON
-        jButton3.setOpaque(true);
-        jButton3.setBackground(new Color(0, 105, 255));
-        jButton3.setForeground(Color.WHITE);
-        jButton3.setFocusPainted(false);
-        jButton3.setBorderPainted(false);
-
-        // CLEAR ALL BUTTON
-        jButton2.setContentAreaFilled(true);
-        jButton2.setOpaque(true);
-        jButton2.setBackground(Color.WHITE);
-        jButton2.setForeground(Color.DARK_GRAY);
-        jButton2.setFocusPainted(false);
-        jButton2.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
     }
 
     @SuppressWarnings("unchecked")
@@ -428,8 +413,10 @@ public class Billing extends javax.swing.JFrame {
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
-
+    
+    //SAVE PATIENT - BUTTON
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
         if (txtPatientName.getText().trim().isEmpty()
                 || txtDiagnosis.getText().trim().isEmpty()
                 || txtAdmitDate.getText().trim().isEmpty()
@@ -438,21 +425,25 @@ public class Billing extends javax.swing.JFrame {
                 || txtPharmacyFee.getText().trim().isEmpty()) {
 
             JOptionPane.showMessageDialog(this,"Please fill out all fields.");
-
             return;
+            
         }
         try {
+            String patientInfo = txtPatientName.getText() + " | "   + txtDiagnosis.getText() + " | " + txtAdmitDate.getText();
+
+            patients.add(patientInfo);//Gina add du String into the arrayList
+
             FileWriter writer = new FileWriter("patients.txt", true);
 
-        writer.write("Patient Name: " + txtPatientName.getText() + "\n");
-        writer.write("Diagnosis: " + txtDiagnosis.getText() + "\n");
-        writer.write("Admit Date: " + txtAdmitDate.getText() + "\n");
-        writer.write("Room Rate: " + txtRoomRate.getText() + "\n");
-        writer.write("Doctor Fee: " + txtDoctorFee.getText() + "\n");
-        writer.write("Pharmacy Fee: " + txtPharmacyFee.getText() + "\n");
-        writer.write("-----------------------------------\n");
+            writer.write("Patient Name: " + txtPatientName.getText() + "\n");
+            writer.write("Diagnosis: " + txtDiagnosis.getText() + "\n");
+            writer.write("Admit Date: " + txtAdmitDate.getText() + "\n");
+            writer.write("Room Rate: " + txtRoomRate.getText() + "\n");
+            writer.write("Doctor Fee: " + txtDoctorFee.getText() + "\n");
+            writer.write("Pharmacy Fee: " + txtPharmacyFee.getText() + "\n");
+            writer.write("-----------------------------------\n");
 
-        writer.close();
+            writer.close();
 
         JOptionPane.showMessageDialog(this, "Patient record saved successfully!");
 
@@ -465,7 +456,8 @@ public class Billing extends javax.swing.JFrame {
     private void txtPatientNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPatientNameActionPerformed
-
+    
+    //CLEAR ALL BUTTON
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         txtPatientName.setText("");
         txtDiagnosis.setText("");
@@ -486,15 +478,15 @@ public class Billing extends javax.swing.JFrame {
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField9ActionPerformed
-
+    
+    //COMPUTE BILL - BUTTON
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
 
         if (txtRoomRate.getText().trim().isEmpty()
                 || txtDoctorFee.getText().trim().isEmpty()
                 || txtPharmacyFee.getText().trim().isEmpty()) {
 
-            JOptionPane.showMessageDialog(this,
-                    "Please enter all billing information.");
+            JOptionPane.showMessageDialog(this, "Please enter all billing information.");
             return;
         }
 
