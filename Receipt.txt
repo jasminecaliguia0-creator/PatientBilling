@@ -1,15 +1,15 @@
 BILL BREAKDOWN
 
-Days Stayed: 4
+Days Stayed: 5
 
-Room Rate (4 days): ₱8000.00
-Doctor Fee (4 days): ₱6000.00
-Pharmacy Fee: ₱1000.00
+Room Rate (5 days): ₱10000.00
+Doctor Fee (5 days): ₱7500.00
+Pharmacy Fee: ₱500.00
 
-Total: ₱15000.00
+Total: ₱18000.00
 
 PHILHEALTH DEDUCTION: DISCOUNT:
-₱3000.00
+₱3600.00
 
 NET AMOUNT DUE:
-₱12000.00
+₱14400.00

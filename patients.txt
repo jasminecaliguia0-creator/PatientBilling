@@ -1,21 +1,26 @@
-Patient Name: 
-Diagnosis: 
-Admit Date: 
-Room Rate: 
-Doctor Fee: 
-Pharmacy Fee: 
+
 -----------------------------------
-Patient Name: Jasmine Nicole B. Caliguia
-Diagnosis: Dengue
-Admit Date: 10/11/26
+Patient Name: jsmn
+Discharge Date: 10/15/26
+Diagnosis: dengue
+Admit Date: 10/10/26
 Room Rate: 2000
 Doctor Fee: 1500
-Pharmacy Fee: 1200
------------------------------------
-Patient Name: 
-Diagnosis: 
-Admit Date: 
-Room Rate: 
-Doctor Fee: 
-Pharmacy Fee: 
+Pharmacy Fee: 500
+Discount: ₱3600.00
+Total: BILL BREAKDOWN
+
+Days Stayed: 5
+
+Room Rate (5 days): ₱10000.00
+Doctor Fee (5 days): ₱7500.00
+Pharmacy Fee: ₱500.00
+
+Total: ₱18000.00
+
+PHILHEALTH DEDUCTION: DISCOUNT:
+₱3600.00
+
+NET AMOUNT DUE:
+₱14400.00
 -----------------------------------

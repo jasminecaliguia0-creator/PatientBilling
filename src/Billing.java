@@ -14,7 +14,7 @@ public class Billing extends javax.swing.JFrame {
         initComponents();
 
         setSize(1000, 600);
-        setLocationRelativeTo(null);//maakes window appear sa center it screen.
+        setLocationRelativeTo(null);//makes window appear sa center it screen.
         setResizable(false);
 
     }
@@ -42,16 +42,16 @@ public class Billing extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         txtDischargeDate = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        txtPatientname = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
+        txtDiscount = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtBillBreakdown = new javax.swing.JTextArea();
+        txtTotal = new javax.swing.JTextArea();
         jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -119,7 +119,7 @@ public class Billing extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setText("Admit Date (MM/dd/yyy)");
+        jLabel4.setText("Admit Date (MM/dd/yy)");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
@@ -140,9 +140,7 @@ public class Billing extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel2)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtRoomRate, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -217,9 +215,9 @@ public class Billing extends javax.swing.JFrame {
         txtDischargeDate.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.gray));
         txtDischargeDate.addActionListener(this::txtDischargeDateActionPerformed);
 
-        jTextField9.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField9.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.gray));
-        jTextField9.addActionListener(this::jTextField9ActionPerformed);
+        txtPatientname.setBackground(new java.awt.Color(255, 255, 255));
+        txtPatientname.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.gray));
+        txtPatientname.addActionListener(this::txtPatientnameActionPerformed);
 
         jButton6.setBackground(new java.awt.Color(0, 105, 255));
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -235,9 +233,9 @@ public class Billing extends javax.swing.JFrame {
         jTextField10.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.gray));
         jTextField10.addActionListener(this::jTextField10ActionPerformed);
 
-        jTextField11.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField11.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.gray));
-        jTextField11.addActionListener(this::jTextField11ActionPerformed);
+        txtDiscount.setBackground(new java.awt.Color(255, 255, 255));
+        txtDiscount.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.gray));
+        txtDiscount.addActionListener(this::txtDiscountActionPerformed);
 
         jLabel11.setForeground(new java.awt.Color(102, 102, 102));
         jLabel11.setText("DISCHARGE DATE");
@@ -249,11 +247,11 @@ public class Billing extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(102, 102, 102));
         jLabel16.setText("PHILHEALTH DEDUCTION");
 
-        txtBillBreakdown.setBackground(new java.awt.Color(255, 255, 255));
-        txtBillBreakdown.setColumns(20);
-        txtBillBreakdown.setRows(5);
-        txtBillBreakdown.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.lightGray, null));
-        jScrollPane1.setViewportView(txtBillBreakdown);
+        txtTotal.setBackground(new java.awt.Color(255, 255, 255));
+        txtTotal.setColumns(20);
+        txtTotal.setRows(5);
+        txtTotal.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.lightGray, null));
+        jScrollPane1.setViewportView(txtTotal);
 
         jButton5.setBackground(new java.awt.Color(0, 105, 255));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -278,7 +276,7 @@ public class Billing extends javax.swing.JFrame {
                                     .addComponent(jLabel12))
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-                                    .addComponent(jTextField9, javax.swing.GroupLayout.Alignment.LEADING)))
+                                    .addComponent(txtPatientname, javax.swing.GroupLayout.Alignment.LEADING)))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(txtDischargeDate, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(3, 3, 3)))
@@ -293,7 +291,7 @@ public class Billing extends javax.swing.JFrame {
                                     .addGroup(jPanel3Layout.createSequentialGroup()
                                         .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(txtDiscount, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
@@ -313,9 +311,9 @@ public class Billing extends javax.swing.JFrame {
                             .addComponent(jLabel9))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDiscount, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtPatientname, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(33, 33, 33)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel11)
@@ -416,12 +414,14 @@ public class Billing extends javax.swing.JFrame {
     
     //SAVE PATIENT - BUTTON
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
+        
         if (txtPatientName.getText().trim().isEmpty()
                 || txtDiagnosis.getText().trim().isEmpty()
                 || txtAdmitDate.getText().trim().isEmpty()
+                || txtDischargeDate.getText().trim().isEmpty()
                 || txtRoomRate.getText().trim().isEmpty()
                 || txtDoctorFee.getText().trim().isEmpty()
+                || txtDiscount.getText().trim().isEmpty()
                 || txtPharmacyFee.getText().trim().isEmpty()) {
 
             JOptionPane.showMessageDialog(this,"Please fill out all fields.");
@@ -436,11 +436,13 @@ public class Billing extends javax.swing.JFrame {
             FileWriter writer = new FileWriter("patients.txt", true);
 
             writer.write("Patient Name: " + txtPatientName.getText() + "\n");
+            writer.write("Discharge Date: " + txtDischargeDate.getText() + "\n");
             writer.write("Diagnosis: " + txtDiagnosis.getText() + "\n");
             writer.write("Admit Date: " + txtAdmitDate.getText() + "\n");
             writer.write("Room Rate: " + txtRoomRate.getText() + "\n");
             writer.write("Doctor Fee: " + txtDoctorFee.getText() + "\n");
             writer.write("Pharmacy Fee: " + txtPharmacyFee.getText() + "\n");
+            writer.write("Discount: " + txtDiscount.getText() + "\n");
             writer.write("-----------------------------------\n");
 
             writer.close();
@@ -475,9 +477,9 @@ public class Billing extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDischargeDateActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void txtPatientnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_txtPatientnameActionPerformed
     
     //COMPUTE BILL - BUTTON
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -513,12 +515,12 @@ public class Billing extends javax.swing.JFrame {
 
             double netAmount = total - deduction;
 
-            // Deduction textbox
-            jTextField11.setText(String.format("₱%.2f", deduction));
+           
+            txtDiscount.setText(String.format("₱%.2f", deduction));
 
-            // Bill Breakdown
-            txtBillBreakdown.setText(
-                    "BILL BREAKDOWN\n\n"
+            // Display the Bill Breakdown
+            txtTotal.setText(
+                    "\nBILL BREAKDOWN\n\n"
                     + "Days Stayed: " + daysStayed
                     + "\n\nRoom Rate (" + daysStayed + " days): ₱"
                     + String.format("%.2f", roomTotal)
@@ -544,12 +546,12 @@ public class Billing extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField10ActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void txtDiscountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDiscountActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_txtDiscountActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        if (txtBillBreakdown.getText().trim().isEmpty()) {
+        if (txtTotal.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please compute the bill first.");
             return;
         }
@@ -558,7 +560,7 @@ public class Billing extends javax.swing.JFrame {
         try {
 
             FileWriter writer = new FileWriter("Receipt.txt");
-            writer.write(txtBillBreakdown.getText());
+            writer.write(txtTotal.getText());
             writer.close();
 
             JOptionPane.showMessageDialog(this, "Receipt saved successfully!");
@@ -622,16 +624,16 @@ public class Billing extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField txtAdmitDate;
-    private javax.swing.JTextArea txtBillBreakdown;
     private javax.swing.JTextField txtDiagnosis;
     private javax.swing.JTextField txtDischargeDate;
+    private javax.swing.JTextField txtDiscount;
     private javax.swing.JTextField txtDoctorFee;
     private javax.swing.JTextField txtPatientName;
+    private javax.swing.JTextField txtPatientname;
     private javax.swing.JTextField txtPharmacyFee;
     private javax.swing.JTextField txtRoomRate;
+    private javax.swing.JTextArea txtTotal;
     // End of variables declaration//GEN-END:variables
 }
